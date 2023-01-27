@@ -11,10 +11,13 @@ public class TapisRoulant : MonoBehaviour
     Vector2 vecteur;
     Quaternion Rota;
     GameObject tapis;
+
     // Start is called before the first frame update
     void Start()
     {
         vecteur = new Vector2(-20.2f, 0);
+        tapis = Instantiate(Tapis, new Vector2(-1f,0f), Rota);
+        tapis.name = "Patient0";
         Instantiate(Tapis, vecteur, Rota);
     }
 
