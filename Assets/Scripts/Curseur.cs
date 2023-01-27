@@ -6,8 +6,8 @@ public class Curseur : MonoBehaviour
 {
     private void OnMouseOver()
     {
-        print("Ah");
-        if (Input.GetMouseButtonDown(0))
+        //print("Ah");
+        if (Input.GetMouseButton(0))
         {
             print("1");
         }

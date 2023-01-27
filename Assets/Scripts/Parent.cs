@@ -27,7 +27,7 @@ public class Parent : MonoBehaviour
         if (timer >= delai)
         {
             vecteur = new Vector2(Random.Range(-11, -13), Random.Range(0.8f, -0.8f));
-            Temp = Instantiate(Objet1, vecteur, Rota);
+            Temp = Instantiate(Objet1, new Vector3(Random.Range(-11, -13), Random.Range(0.8f, -0.8f), -1), Rota);
             Temp.transform.parent = GameObject.Find(nomDuTruc).GetComponent<Transform>();
             timer = 0f;
             i++;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3193967562056398825}
   - component: {fileID: 3193967562056398824}
   - component: {fileID: 3193967562056398823}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tapis
   m_TagString: Tapis
   m_Icon: {fileID: 0}
