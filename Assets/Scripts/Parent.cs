@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Parent : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Parent : MonoBehaviour
     public GameObject Objet3;
     public GameObject Objet4;
     public GameObject Objet5;
+    public Slider SliderReference;
 
 
     GameObject Temp;
@@ -40,6 +43,8 @@ public class Parent : MonoBehaviour
             Temp = Instantiate(Temp2, new Vector3(Random.Range(-11, -13), Random.Range(0.8f, -0.8f), -1), Rota);
             Temp.transform.parent = GameObject.Find(nomDuTruc).GetComponent<Transform>();
             Temp.GetComponent<FixedJoint2D>().connectedBody = GameObject.Find(nomDuTruc).GetComponent<Rigidbody2D>();
+            Temp.GetComponent<ToolTip>().doggo = GameObject.Find("Doggo").GetComponent<Player>();
+            Temp.GetComponent<ToolTip>().slider = SliderReference;
             timer = 0f;
             i++;
             //print(i);

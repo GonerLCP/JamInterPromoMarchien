@@ -37,6 +37,6 @@ public class ToolTipManager : MonoBehaviour
     }
     public void HideToopTip()
     {
-        gameObject.SetActive(false);
+       gameObject.SetActive(false);
     }
 }

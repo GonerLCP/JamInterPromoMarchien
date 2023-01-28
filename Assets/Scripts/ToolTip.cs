@@ -11,7 +11,7 @@ public class ToolTip : MonoBehaviour
 
     private bool doublecheck = false;
     private bool failed = false;
-
+    private float compteur = 0;
 
     public void Start()
     {
@@ -24,7 +24,8 @@ public class ToolTip : MonoBehaviour
         {
             ToolTipManager.instance.SetAndShowToolTip();
             print("enter");
-            slider.value = 0;
+            compteur = 0;
+            slider.value = compteur;
             if (!doublecheck)
             {
                 slider.maxValue = 1000;
@@ -42,13 +43,16 @@ public class ToolTip : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            slider.value += 1;
+            compteur += 1;
+            slider.value = compteur;
+            print(compteur);
 
             if (slider.value == slider.maxValue)
             {
                 if (!drogue)
                 {
                     gameObject.SetActive(false);
+                    compteur = 0;
                     ToolTipManager.instance.HideToopTip();
                 }
 
@@ -56,23 +60,31 @@ public class ToolTip : MonoBehaviour
                 {
                     doggo.damagecontrol(1);
                     ToolTipManager.instance.HideToopTip();
+                    compteur = 0;
                     failed = true;
                 }
 
                 if (drogue && !doublecheck)
                 {
                     slider.value = 0;
+                    compteur = 0;
                     slider.maxValue = Random.Range(450, 761);
                     doublecheck = true;
                 }
             }
         }
 
-        if (!Input.GetMouseButton(0) && slider.value >= (slider.maxValue - (slider.maxValue / 10)) )
+
+        if (!Input.GetMouseButton(0))
         {
-            print("masterclass jacob");
-            gameObject.SetActive(false);
-            ToolTipManager.instance.HideToopTip();
+            compteur = 0;
+            if (slider.value >= (slider.maxValue - (slider.maxValue / 10)) && doublecheck)
+            {
+                print("masterclass jacob");
+                gameObject.SetActive(false);
+                ToolTipManager.instance.HideToopTip();
+            }
         }
+        
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -549358399695889055}
   - component: {fileID: -4805200207389466855}
   - component: {fileID: -3408505397385068821}
+  - component: {fileID: -4665405621146569347}
   m_Layer: 0
   m_Name: Square 1
   m_TagString: Untagged
@@ -191,3 +192,18 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &-4665405621146569347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346788952245795484}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb68144d9317d504a97bdc0d7157861e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doggo: {fileID: 0}
+  drogue: 0
+  slider: {fileID: 0}
