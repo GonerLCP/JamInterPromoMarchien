@@ -28,7 +28,7 @@ public class ToolTip : MonoBehaviour
             slider.value = compteur;
             if (!doublecheck)
             {
-                slider.maxValue = 1000;
+                slider.maxValue = 300;
             }
         }
     }
@@ -68,7 +68,7 @@ public class ToolTip : MonoBehaviour
                 {
                     slider.value = 0;
                     compteur = 0;
-                    slider.maxValue = Random.Range(450, 761);
+                    slider.maxValue = Random.Range(120, 211);
                     doublecheck = true;
                 }
             }
