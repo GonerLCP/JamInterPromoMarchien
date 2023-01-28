@@ -67,5 +67,12 @@ public class ToolTip : MonoBehaviour
                 }
             }
         }
+
+        if (!Input.GetMouseButton(0) && slider.value >= (slider.maxValue - (slider.maxValue / 10)) )
+        {
+            print("masterclass jacob");
+            gameObject.SetActive(false);
+            ToolTipManager.instance.HideToopTip();
+        }
     }
 }
