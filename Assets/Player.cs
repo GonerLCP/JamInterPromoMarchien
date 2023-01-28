@@ -27,16 +27,21 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
-            if(currentHealth < maxHealth)
-            {
-                Ilaprisdeladrogue(1);
-                updateldvalue = true;
-                transparency += 0.05f;
-            }
-            effect.color = new Color(1f, 0.5f, 0.9f, transparency);
-
+            damagecontrol(1);
         }
     }
+
+    public void damagecontrol(int cocadelamama)
+    {
+        if (currentHealth < maxHealth)
+        {
+            Ilaprisdeladrogue(cocadelamama);
+            updateldvalue = true;
+            transparency += 0.05f;
+        }
+        effect.color = new Color(1f, 0.5f, 0.9f, transparency);
+    }
+
 
     public void Ilaprisdeladrogue(int cocadelamama)
     {

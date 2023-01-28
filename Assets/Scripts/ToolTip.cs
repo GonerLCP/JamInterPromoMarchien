@@ -44,19 +44,17 @@ public class ToolTip : MonoBehaviour
         {
             slider.value += 1;
 
-
             if (slider.value == slider.maxValue)
             {
                 if (!drogue)
                 {
                     gameObject.SetActive(false);
                     ToolTipManager.instance.HideToopTip();
-                    return;
                 }
 
                 if(drogue && doublecheck && !failed)
                 {
-                    doggo.Ilaprisdeladrogue(1);
+                    doggo.damagecontrol(1);
                     ToolTipManager.instance.HideToopTip();
                     failed = true;
                 }
