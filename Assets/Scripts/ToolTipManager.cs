@@ -7,8 +7,6 @@ public class ToolTipManager : MonoBehaviour
 {
     public static ToolTipManager instance;
 
-    public TextMeshProUGUI textComponent;
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -33,14 +31,12 @@ public class ToolTipManager : MonoBehaviour
         transform.position = Input.mousePosition;
     }
 
-    public void SetAndShowToolTip(string message)
+    public void SetAndShowToolTip()
     {
         gameObject.SetActive(true);
-        textComponent.text = message;
     }
     public void HideToopTip()
     {
         gameObject.SetActive(false);
-        textComponent.text = string.Empty;
     }
 }

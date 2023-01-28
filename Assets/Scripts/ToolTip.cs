@@ -8,7 +8,7 @@ public class ToolTip : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        ToolTipManager.instance.SetAndShowToolTip(message);
+        ToolTipManager.instance.SetAndShowToolTip();
         print("enter");
     }
 
