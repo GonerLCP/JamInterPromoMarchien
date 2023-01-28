@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Curseur : MonoBehaviour
 {
-    private void OnMouseOver()
+    /*private void OnMouseOver()
     {
         //print("Ah");
         if (Input.GetMouseButton(0))
@@ -15,5 +15,5 @@ public class Curseur : MonoBehaviour
         {
             print("0");
         }
-    }
+    }*/
 }

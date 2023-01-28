@@ -36,15 +36,15 @@ public class Player : MonoBehaviour
             effect.color = new Color(1f, 0.5f, 0.9f, transparency);
 
         }
+    }
 
-        void Ilaprisdeladrogue(int cocadelamama)
-        {
-            currentHealth += cocadelamama;
-            healthbar.setHealth(currentHealth);
+    public void Ilaprisdeladrogue(int cocadelamama)
+    {
+        currentHealth += cocadelamama;
+        healthbar.setHealth(currentHealth);
 
-            float value = (float)currentHealth;
-            ppmanager.caIntensity(value);
-            ppmanager.blIntensity(value);
-        }
+        float value = (float)currentHealth;
+        ppmanager.caIntensity(value);
+        ppmanager.blIntensity(value);
     }
 }
