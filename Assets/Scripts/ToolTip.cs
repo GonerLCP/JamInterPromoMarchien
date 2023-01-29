@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ToolTip : MonoBehaviour
 {
@@ -13,9 +14,11 @@ public class ToolTip : MonoBehaviour
     private bool failed = false;
     private float compteur = 0;
 
+    public TextMeshProUGUI scoring;
+
     public void Start()
     {
-        drogue = (Random.value > 0.5f);
+        //drogue = (Random.value > 0.5f);
     }
 
     private void OnMouseEnter()
@@ -81,6 +84,7 @@ public class ToolTip : MonoBehaviour
             if (slider.value >= (slider.maxValue - (slider.maxValue / 10)) && doublecheck)
             {
                 print("masterclass jacob");
+                scoring = scoring + 20;
                 gameObject.SetActive(false);
                 ToolTipManager.instance.HideToopTip();
             }

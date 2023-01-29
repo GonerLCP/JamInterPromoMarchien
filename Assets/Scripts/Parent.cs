@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class Parent : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class Parent : MonoBehaviour
     public GameObject Objet4;
     public GameObject Objet5;
     public Slider SliderReference;
-
+    public TextMeshProUGUI ScoreReference;
 
     GameObject Temp;
     GameObject Temp2;
@@ -45,6 +45,8 @@ public class Parent : MonoBehaviour
             Temp.GetComponent<FixedJoint2D>().connectedBody = GameObject.Find(nomDuTruc).GetComponent<Rigidbody2D>();
             Temp.GetComponent<ToolTip>().doggo = GameObject.Find("Doggo").GetComponent<Player>();
             Temp.GetComponent<ToolTip>().slider = SliderReference;
+            Temp.GetComponent<ToolTip>().drogue = (Random.value > 0.5f);
+            Temp.GetComponent<ToolTip>().scoring = ScoreReference;
             timer = 0f;
             i++;
             //print(i);
