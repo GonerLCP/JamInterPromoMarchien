@@ -15,6 +15,7 @@ public class ToolTip : MonoBehaviour
     private float compteur = 0;
 
     public TextMeshProUGUI scoring;
+    int score;
 
     public void Start()
     {
@@ -56,6 +57,8 @@ public class ToolTip : MonoBehaviour
                 {
                     gameObject.SetActive(false);
                     compteur = 0;
+                    score = int.Parse(scoring.text) + 10;
+                    scoring.text = score.ToString();
                     ToolTipManager.instance.HideToopTip();
                 }
 
@@ -84,7 +87,8 @@ public class ToolTip : MonoBehaviour
             if (slider.value >= (slider.maxValue - (slider.maxValue / 10)) && doublecheck)
             {
                 print("masterclass jacob");
-                scoring = scoring + 20;
+                score = int.Parse(scoring.text) + 50;
+                scoring.text = score.ToString();
                 gameObject.SetActive(false);
                 ToolTipManager.instance.HideToopTip();
             }
