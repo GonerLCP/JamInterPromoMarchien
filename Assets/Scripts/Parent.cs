@@ -39,8 +39,8 @@ public class Parent : MonoBehaviour
         if (timer >= delai)
         {
             Temp2 = Objects[Random.Range(0,5)];
-            vecteur = new Vector2(Random.Range(-21, -23), Random.Range(0.8f, -0.8f));
-            Temp = Instantiate(Temp2, new Vector3(Random.Range(-21, -23), Random.Range(0.8f, -0.8f), -1), Rota);
+            vecteur = new Vector2(Random.Range(-21, -23), Random.Range(3.0f, 0.6f));
+            Temp = Instantiate(Temp2, new Vector3(Random.Range(-21, -23), Random.Range(3.0f, 0.6f), -1), Rota);
             Temp.transform.parent = GameObject.Find(nomDuTruc).GetComponent<Transform>();
             Temp.GetComponent<FixedJoint2D>().connectedBody = GameObject.Find(nomDuTruc).GetComponent<Rigidbody2D>();
             Temp.GetComponent<ToolTip>().doggo = GameObject.Find("Doggo").GetComponent<Player>();

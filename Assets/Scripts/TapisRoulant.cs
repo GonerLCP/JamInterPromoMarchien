@@ -15,8 +15,8 @@ public class TapisRoulant : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vecteur = new Vector2(-29.5f, 0);
-        tapis = Instantiate(Tapis, new Vector2(-10.35f,0f), Rota);
+        vecteur = new Vector2(-29.5f, 1.38f);
+        tapis = Instantiate(Tapis, new Vector2(-10.35f, 1.38f), Rota);
         tapis.name = "Patient0";
         Instantiate(Tapis, vecteur, Rota);
     }
@@ -26,7 +26,7 @@ public class TapisRoulant : MonoBehaviour
     {
         if (Spone.AtteintLaFin == true)
         {
-            vecteur = new Vector2(-29.5f, 0);
+            vecteur = new Vector2(-29.5f, 1.38f);
             tapis = Instantiate(Tapis, vecteur, Rota);
             tapis.name = "Clone" + i;
             i++;

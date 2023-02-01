@@ -84,7 +84,7 @@ public class ToolTip : MonoBehaviour
         if (!Input.GetMouseButton(0))
         {
             compteur = 0;
-            if (slider.value >= (slider.maxValue - (slider.maxValue / 10)) && doublecheck)
+            if (slider.value >= (slider.maxValue - (slider.maxValue / 10))  && doublecheck && !failed)
             {
                 print("masterclass jacob");
                 score = int.Parse(scoring.text) + 50;
